@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.port || 3000;
 
 // Conexão com a Base de Dados
-mongoose.connect('mongodb+srv://mvrtr:mvrtr@cluster0-5lypc.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
